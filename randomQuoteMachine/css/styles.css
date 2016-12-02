@@ -1,0 +1,77 @@
+body  {
+	background: url(../images/back2.jpg);
+	font-family: 'Tangerine', cursive;
+}
+/*Random Quote Machine Text Header*/
+h1 {	
+	font-size: 6em;
+}
+
+/*Random quote div*/
+div#tile {	
+	margin-top: 100px;	
+}
+div#random-quote {
+  animation-duration: 2s;
+ }
+
+/*Quote text*/
+p {
+	font-family: 'Satisfy', cursive;
+	display: inline;
+	font-size: 40px;
+	font-style: italic;
+
+}
+
+/*Quote Author text*/
+footer.pull-right {	
+	font-size: 3em;
+}
+
+/*Div that contains both of buttons*/
+div#button-icon {	
+	position: absolute;
+	top: 550px;
+}
+
+/*Quote button*/
+div#btn-quote {	
+	width: 100px;
+	height: 50px;
+	box-shadow: 5px 5px 5px grey;
+	border: 0px;
+	opacity: .6;
+	transition-duration: 2s;
+}
+div#btn-quote button {
+	background: url(../images/btn-pic.jpg) no-repeat;
+	width: 100%;
+	height: 100%;
+	font-size: 2.1em;
+	font-weight: 600;
+	border: .2px solid #DAA520;
+}
+div#btn-quote button:focus {
+	outline: none!important;
+}
+
+/*Twitter button*/
+a.btn-twitter {
+	background: url(../images/btn-pic.jpg) no-repeat;
+	border: 0px;
+	box-shadow: 5px 5px 5px grey;
+	opacity: .6;
+	border: .2px solid #DAA520;
+}
+ a.btn-social-icon.btn-twitter:focus, a.btn-social-icon.btn-twitter:hover{
+ 	background-color: #FFDEAD;
+ }
+a.btn-twitter span.fa-twitter {
+	color: #8B4513;
+	font-size: 2.5em;
+}
+
+
+
+
