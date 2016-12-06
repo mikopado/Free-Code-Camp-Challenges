@@ -1,0 +1,131 @@
+body {
+	color: black;	
+    font-family: 'Oswald', sans-serif;
+
+}
+/*Different font for title and city name*/
+div.text-center h1, div#city  {
+	font-family: 'Open Sans', sans-serif;
+}
+/*Container-fluid---*/
+div.container-fluid {/*makes the image full screen*/
+	padding: 0;
+
+}
+/*Positioning row in function of image*/
+div.row {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+/*Background images*/
+img#back {	
+	width: 100%;	
+	opacity: .8;
+}
+/*********************
+	TEMPERATURE
+
+*********************/
+/*Button of current temperature*/
+div#temperature button {
+	background-color: transparent;
+	border: none;
+	color: black;
+	font-size: 20px;
+	box-shadow: 2px 2px 5px grey;
+}
+div#temperature button:focus, div#temperature button:hover {
+	outline: none!important;
+}
+/*********************
+	HUMIDITY AND WIND
+
+*********************/
+/*Makes the arrow to wind speed*/
+div#arrow-tile.enable::after {
+  color: #4d4dff;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid;
+  border-right: 10px solid transparent; 
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 0px;
+  
+}
+/*Wind speed div --- arrow plus speed*/
+div#arrow-tile  {
+  background-color: #4d4dff;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: white;
+}
+/*More parameters --- Humidity and wind elements*/
+div#more-parameters div.params {
+	display: inline;
+	margin-right: 20px;
+
+}
+div.params span {
+	margin-left: 5px;	
+}
+/*********************
+	FORECAST
+
+*********************/
+/*Forecast days*/
+div#forecast div#day-1, div#day-2, div#day-3 {
+	display: inline-block;
+	
+}
+div#forecast div#day-1, div#day-2 {
+	margin-right: 80px;
+}
+
+/****************************
+	MARGINS AND FONT SIZE
+
+****************************/
+/*Margins beetween contents*/
+div.text-center h1 {	
+	margin-bottom: 40px;
+}
+div#city, div#weather-description, div#temperature, div#more-parameters, div#time {
+	margin-bottom: 20px;
+}
+div#forecast {
+	margin-top: 40px;
+}
+/*Margin beetween icon and weather description*/
+img#icon-weather {
+	margin-right: 10px;
+}
+div#more-parameters {
+	margin-top: 30px;
+}
+
+/*Font-sizes of different element*/
+div#weather-description{
+	font-size: 16px;
+}
+div#time::first-line {
+	font-size: 18px;
+
+}
+/*Capitalize the first letters in weather descriptions --- Current weather and forecast*/
+div#weather-description span, div#forecast span{
+	text-transform: capitalize;
+}
+
+
+
