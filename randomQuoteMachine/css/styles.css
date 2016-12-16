@@ -1,5 +1,8 @@
+
 body  {
-	background: url(../images/back2.jpg);
+	background: url(../images/back2.jpg) no-repeat;
+  	background-size: cover;  	
+  	background-attachment: fixed;
 	font-family: 'Tangerine', cursive;
 }
 /*Random Quote Machine Text Header*/
@@ -73,5 +76,42 @@ a.btn-twitter span.fa-twitter {
 }
 
 
-
+@media(max-width: 991px) {
+  p {
+    font-size: 2em;
+  }
+  div#random-quote footer.pull-right {
+    font-size: 2em;
+  }
+  
+  div#tile {	
+	margin-top: 60px;	
+  }
+ 
+}
+@media(max-width: 545px) {
+  h1 {	
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+   div#random-quote footer.pull-right {
+    font-size: 1.5em;
+  }
+  div#button-icon {	
+	top: 350px;
+}
+  div#btn-quote button {
+  	font-size: 1.5em;
+  	
+  }
+  a.btn-twitter span.fa-twitter {
+  	font-size: 1.5em;
+  }
+  div#btn-quote {
+  	width: 80px;
+  	height: 30px;
+  }
+ }
 

@@ -8,10 +8,10 @@ $(function() {
 			var long = position.coords.longitude;
 			
 			// Current weather
-			$.getJSON('http://api.openweathermap.org/data/2.5/weather?lat='+ lat + '&lon=' + long + '&appid=5fa3bb2e711d8c5fe9d4e24c15d46173', function(data) {
+			$.getJSON('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat='+ lat + '&lon=' + long + '&appid=5fa3bb2e711d8c5fe9d4e24c15d46173', function(data) {
 				
 				//background image
-				$('div.container-fluid').prepend('<img class="img-responsive" id="back" src="images/' + getWallPaper(data.weather[0].icon) + '.jpg">');
+				$('body').css('background-image', 'url(images/' + getWallPaper(data.weather[0].icon) + '.jpg)');
 				
 				//City
 				$('div#city').html('<h2>' + data.name + ', ' + data.sys.country + '</h2>');
@@ -47,7 +47,7 @@ $(function() {
 			});
 
 			// Forecast
-			$.getJSON('http://api.openweathermap.org/data/2.5/forecast/daily?lat='+ lat + '&lon=' + long + '&cnt=4&appid=5fa3bb2e711d8c5fe9d4e24c15d46173', function(forecast) {
+			$.getJSON('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/daily?lat='+ lat + '&lon=' + long + '&cnt=4&appid=5fa3bb2e711d8c5fe9d4e24c15d46173', function(forecast) {
 				injectForecast(forecast, '#forecast div#day-');				
 				
 			}).fail(function() {

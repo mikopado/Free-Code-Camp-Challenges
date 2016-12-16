@@ -2,11 +2,11 @@ $(function() {
 	'use strict';
 
 	$('div#btn-quote button').on('click', function(e) {	//on click connect to forismatic API to get json file. 	
-		$.getJSON('http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?', function(json) {			
+		$.getJSON('https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en', function(json) {			
 			getQuote(json);
 			
 		}).fail(function() {			
-			$.getJSON('http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?', function(json) {
+			$.getJSON('https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en', function(json) {
 				getQuote(json)
 			});
 		});

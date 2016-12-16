@@ -1,29 +1,26 @@
 body {
 	color: black;	
     font-family: 'Oswald', sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
+}
+/*Creates a opaque layer over the background image --- Way to get opacity for background image*/
+body::after {
+	top: 0; bottom: 0; left: 0; right: 0;
+	background-color: white;
+	opacity: 0.5;
+    position: fixed;
+    z-index: -1; 
+    content: "";
 }
 /*Different font for title and city name*/
 div.text-center h1, div#city  {
 	font-family: 'Open Sans', sans-serif;
 }
-/*Container-fluid---*/
-div.container-fluid {/*makes the image full screen*/
-	padding: 0;
 
-}
-/*Positioning row in function of image*/
-div.row {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-}
-/*Background images*/
-img#back {	
-	width: 100%;	
-	opacity: .8;
-}
+
 /*********************
 	TEMPERATURE
 
@@ -34,7 +31,7 @@ div#temperature button {
 	border: none;
 	color: black;
 	font-size: 20px;
-	box-shadow: 2px 2px 5px grey;
+	box-shadow: 2px 2px 5px grey;	
 }
 div#temperature button:focus, div#temperature button:hover {
 	outline: none!important;
@@ -127,5 +124,30 @@ div#weather-description span, div#forecast span{
 	text-transform: capitalize;
 }
 
-
+/*MEDIA QUERIES FOR SMALL SCREENS*/
+@media (max-width: 767px) {
+/*	Modify the margin between forecast days and get smaller font-size of title and city*/
+	div#forecast div#day-1, div#day-2 {
+		margin-right: 40px;
+	}
+	h1 {
+		font-size: 28px;
+	}
+	h2 {
+		font-size: 24px;
+	}
+}
+/*ONLY FOR VERY SMALL SCREENS TO ADJUST THE WIND HUMIDITY ROW*/
+@media (max-width: 320px) {
+	div#more-parameters div.params {	
+		margin-right: 10px;
+	}
+	div.params span {
+		margin-left: 0px;	
+	}
+	div#arrow-tile  {
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+}
 
