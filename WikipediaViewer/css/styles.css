@@ -1,0 +1,173 @@
+body {
+	background: url(../images/wikipedia-seeklogo.svg) no-repeat;
+	background-attachment: fixed;
+	background-size: cover;	
+	font-family: 'Fira Sans', sans-serif;
+}
+body::after {
+	top: 0; bottom: 0; left: 0; right: 0;
+	background-color: white;
+	opacity: 0.4;
+    position: fixed;
+    z-index: -1; 
+    content: "";
+}
+/********************************************
+
+	TITLE AND SEARCH TEXT BOX AND BUTTONS
+
+********************************************/
+
+/*Container that includes title and input and buttons elements*/
+div#search-container {
+	margin-bottom: 30px;
+}
+div#search-container h1 {
+	font-size: 4em;
+	font-style: italic;
+	font-family: 'Lora', serif;	
+	font-weight: 600;
+	letter-spacing: 10px;
+	margin-bottom: 30px;
+	color: #595959;
+}
+
+/*Buttons --- Search and Random*/
+div.input-group {	
+	background-color: transparent;
+}
+
+button#random, button#submit {
+	border: 0px;
+}
+div#rnd {
+	padding-right: 10px;	
+}
+div#sbm {
+	padding-left: 10px;
+}
+button#submit:focus, button#submit:hover, button#random:focus, button#random:hover {
+	box-shadow: 0px 1px 8px #808080;	
+	outline: none;	
+}
+/*Input search box and random, search buttons*/
+input#search, button#random, button#submit {
+	border-radius: 50px;
+}
+input#search {
+	background-color: #ffffe6;
+}
+input#search:focus, ul.ui-menu {
+	box-shadow: inset 0px 0px 1px #808080, 0px 1px 8px #808080;
+	border-color: #808080;
+}
+/*********************************************
+
+	AUTOCOMPLETE LIST
+
+********************************************/
+/*Elements in the autocomplete list from search box*/
+li.ui-menu-item:hover, li.ui-menu-item:focus {
+	background-color: #d9d9d9;
+	border-radius: 6px;
+	margin-left: 4px;
+}
+li.ui-menu-item {
+	cursor: pointer;
+	margin-left: 5px;
+}
+ul.ui-menu {
+	border-radius: 15px;
+	background-color: #ffffe6;
+}
+/**************************************
+
+	LIST SEARCHED ELEMENTS
+
+**************************************/
+
+/*Pictures associated to article*/
+div#pic {
+	display: inline;
+	margin-right: 10px;
+	float: right;
+}
+div#pic img.img-responsive {
+	background-color: #ffffe6;
+}
+/*Boxes of searched element*/
+div#main div.art-frame a {
+	color: inherit;
+	text-decoration: none;
+}
+div#main div.art-frame {
+	height: auto;
+	margin-bottom: 30px;
+	border: 1px solid #E6E6FA; 
+	box-shadow: 5px 5px 7px 2px #696969;
+	border-radius: 4px;
+	background-color: #ffffe6;
+	animation-duration: .7s;
+	animation-timing-function: linear;
+}
+div#main div.art-frame:hover {	
+	box-shadow: inset 0px 1px 2px #808080, 0px 1px 18px 4px #808080;
+	border-color: #808080;
+
+}
+/*Headline of article*/
+div#head h2  {	
+	font-family: 'Lora', serif;   
+   font-weight: 600;
+   display: inline;
+
+}
+/*Div element who contains titles and images ---- Useful to make images fitting with titles*/
+div#head {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: 10px;	
+}
+div#main p {
+	text-align: justify-all;
+	margin-left: 20px;	
+}
+ 
+/********************
+
+	MEDIA QUERIES
+
+********************/
+
+@media(min-width: 768px) and (max-width: 991px) {
+	div#search-container h1 {
+		font-size: 3em;
+	}
+	div#main h2 {
+		font-size: 1.5em;
+	}
+}
+@media(min-width: 544px) and(max-width: 767px) {
+	div#search-container h1 {
+		font-size: 2.5em;
+		letter-spacing: 7px;
+	}
+	div#main h2 {
+		font-size: 1.5em;
+	}
+	div#main p {
+		font-size: .8em;
+	}
+}
+@media(max-width: 543px) {
+	div#search-container h1 {
+		font-size: 1.8em;
+		letter-spacing: 5px;
+	}
+	div#main h2 {
+		font-size: 1.5em;
+	}
+	div#main p {
+		font-size: .8em;
+	}
+}
