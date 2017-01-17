@@ -1,0 +1,90 @@
+body{    
+    font-family: 'Play', sans-serif;
+    background-color: #004d00;
+    color: white;
+}
+/*App Title*/
+h1.text-center{
+	font-family: 'Lobster', cursive;
+	font-size: 3em;
+	color: #e60000;
+}
+/*Whole elements. Give spacing between them*/
+div.container div.row:first-child{
+	margin-top: 50px;
+}
+div.container div.row:last-child{
+	margin-top: 20px;
+}
+/*Central button. Pomodoro clock*/
+button#countdown {
+	width: 80%;	
+	border-radius: 50%;
+	background: url('../images/tomato.jpg') no-repeat;	
+	background-position: 50% 38%;
+	color: white;
+	border: solid 2px #ff4d4d;
+	
+}
+button:focus, button:hover{
+	outline: none!important;
+}
+
+/*Text inside Button clock*/
+div#display-session{
+	font-size: 40px;
+	margin-top: 90px;
+}
+div#display-timer{	
+	font-size: 80px;
+	margin-bottom: 80px;
+	margin-top: 30px;
+}
+/*Work session lenght and break lenght buttons*/
+div.start {
+	margin-bottom: 10px;
+
+}
+div.start button{
+	font-size: 25px;
+}
+div#break button, div#work-session button{
+	border: 0px; 
+	color: white;
+	background-color: transparent;
+}
+/*Minus and plus buttons*/
+button#minus, button#plus{
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+/*Length number between plus and minus buttons*/
+div#break span, div#work-session span{
+	margin-right: 10px;
+	margin-left: 10px;
+	font-size: 25px;
+}
+
+
+@media(max-width: 480px){
+	h1.text-center, div#display-session, div#display-timer {
+		font-size: 1.8em;
+	}
+	div#break span, div#work-session span, button#minus, button#plus, div.start button{
+		font-size: 1.1em;
+	}
+	 div#display-session{
+	 	margin-top: 60px;
+	 }
+	 div#display-timer {
+	 	margin-bottom: 50px;
+	 }
+	 div#break button {
+	 	margin-bottom: 20px;
+	 }
+}
+@media(min-width: 424px) and (max-width: 480px){
+	 div#break button {
+	 	margin-bottom: 0px;
+	 }
+}
