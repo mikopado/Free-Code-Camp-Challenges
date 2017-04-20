@@ -1,0 +1,69 @@
+body{
+	font-family: 'Orbitron', sans-serif;
+	background-color: #d4d9de;
+}
+/*Whole Calculator*/
+div#calc{
+	border: solid 2px #a6a6a6;
+	margin-top: 100px;
+	background-color: #a6a6a6;	
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 10px;
+
+}
+/*Spacing between buttons*/
+div#calc div.row{
+	margin-bottom: 10px;
+}
+/*More spacing after last row of buttons*/
+div#calc div.row:last-child{
+	margin-bottom: 20px;
+}
+/*DISPLAY - SCREEN*/
+div#input{
+	border: solid 1px;
+	background-color: #f2f2f2;
+	box-shadow: inset 0px 0px 3px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+div#input p{
+	height: 10px;
+}
+div#input p:first-child{
+	margin-top: 10px;
+	font-weight: 600;
+	margin-bottom: 25px;
+	font-size: 1.5em;
+}
+div#input p:last-child{
+	font-size: .9em;
+}
+
+/*BUTTONS*/
+button.btn.btn-default:focus {
+	outline-color: #374048!important;
+	background-color: #374048;
+	color: white;
+	box-shadow: 0px 0px #2c333a; 
+	transform: translateY(2px);
+}
+button.btn.btn-default{
+	box-shadow: 1px 4px #2c333a;
+	color: white;
+	background-color: #374048;
+	border: 0px;
+	width: 100%;
+	height: 100%;
+
+}
+button#AC.btn.btn-default, button#CE.btn.btn-default{
+	background-color: #ff9900;
+	box-shadow: 1px 4px #995c00;
+}
+button#AC.btn.btn-default:focus, button#CE.btn.btn-default:focus {	
+	box-shadow: 0px 0px #995c00; 
+	outline-color: #ff9900!important;
+
+}
