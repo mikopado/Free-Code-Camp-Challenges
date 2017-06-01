@@ -22,20 +22,20 @@ button.col-xs-4{
 	background-color: #E0FFFF;
 
 }
-div.col-xs-2{
+div.col-sm-2{
 	float: right;
 	margin-top: 50px;
 }
 .off{
 	display: none;
 }
-div.col-xs-2 p{
+div.col-sm-2 p{
 	margin-bottom: 50px;
 	text-align: right;
 	font-family: 'Chewy', cursive;
 	font-size: 1.7em;
 }
-div.col-xs-2 span{
+div.col-sm-2 span{
 	margin-left: 50px;
 }
 
@@ -43,10 +43,10 @@ div.col-xs-2 span{
 	box-shadow: 10px 7px 20px #C0C0C0;
 }
 
-div.col-xs-2 p:first-child{
+div.col-sm-2 p:first-child{
 	color: blue;
 }
-div.col-xs-2 p:last-child{
+div.col-sm-2 p:last-child{
 	color: grey;
 }
 h1{
@@ -67,4 +67,38 @@ button.choice{
 	border-radius: 10px;
 	padding: 15px;
 	outline: none!important;
+}
+
+@media only screen and (max-width: 768px){
+	#intro p, #intro span{
+		font-size: 1.2em;
+	}
+	h1{
+		font-size: 3em;
+		margin-bottom: 70px;
+	}
+	button.choice{
+		font-size: 2em;
+	}
+	div.col-sm-2 p{
+		margin-bottom: 10px;
+		font-size: 1em;
+			
+		
+	}
+	div.col-sm-2 span{
+		margin-left: 10px;
+	}
+	div.col-sm-2{
+		float: none;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		
+	}
+	div.container > div.row{
+		margin-top: 0px;
+	}
+	button.col-xs-4{
+		height: 100px;
+	}
 }

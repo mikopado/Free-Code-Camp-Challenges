@@ -11,13 +11,13 @@ $(function(){
 	} 	
 	$('button.choice').click(function(){
 		$(this).parent().html("");
-		$('div.col-xs-2').removeClass('off');
-		$('div.col-xs-offset-3').addClass('shadow');
-		$.each($('div.col-xs-offset-3'), function(){
+		$('div.col-sm-2').removeClass('off');
+		$('div.col-sm-offset-3').addClass('shadow');
+		$.each($('div.col-sm-offset-3'), function(){
 			for(var i = 0; i < 3; i++){
 				$(this).append('<div class="row rows-' + i + '"></div>');
 			}	
-			$.each($('div.col-xs-offset-3 div.row'), function(){
+			$.each($('div.col-sm-offset-3 div.row'), function(){
 				for(var i = 0; i < 3; i++){
 					$(this).append('<button class="col-xs-4 butt-' + i + '"></button>');
 				}
