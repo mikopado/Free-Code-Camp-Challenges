@@ -1,0 +1,70 @@
+body{
+	background: #F2994A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(left, #F2C94C, #F2994A);
+    background: -moz-linear-gradient(left, #F2C94C, #F2994A);
+    background: -o-linear-gradient(left, #F2C94C, #F2994A);
+    background: linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	width: 100%;
+	height: 100vh;
+}
+div.container > div.row {
+	margin-top: 100px;
+}
+
+button.col-xs-4{
+	border: solid 2px black;
+	height: 150px;
+	outline: none!important;
+	font-family: 'Chewy', cursive;
+	font-size: 5em;
+	font-weight: bold;	
+	background-color: #E0FFFF;
+
+}
+div.col-xs-2{
+	float: right;
+	margin-top: 50px;
+}
+.off{
+	display: none;
+}
+div.col-xs-2 p{
+	margin-bottom: 50px;
+	text-align: right;
+	font-family: 'Chewy', cursive;
+	font-size: 1.7em;
+}
+div.col-xs-2 span{
+	margin-left: 50px;
+}
+
+.shadow{
+	box-shadow: 10px 7px 20px #C0C0C0;
+}
+
+div.col-xs-2 p:first-child{
+	color: blue;
+}
+div.col-xs-2 p:last-child{
+	color: grey;
+}
+h1{
+	font-family: 'Chewy', cursive;
+	margin-bottom: 100px;
+	font-size: 5em;
+	font-weight: bold;	
+}
+#intro p, #intro span{
+	font-size: 2em;
+	margin-bottom: 40px;
+}
+button.choice{
+	font-size: 3em;
+	margin-left: 30px;
+	margin-right: 30px;
+	font-family: 'Chewy', cursive;
+	border-radius: 10px;
+	padding: 15px;
+	outline: none!important;
+}
