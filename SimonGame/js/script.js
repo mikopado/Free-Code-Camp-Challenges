@@ -50,7 +50,7 @@ $(function(){
 		var currentSwitchWidth = parseInt(window.getComputedStyle($('.slider')[0],':before').getPropertyValue('width').substr(0, window.getComputedStyle($('.slider')[0],':before').getPropertyValue('width').length - 2));
 		var totalCurrWidth = currentSwitchWidth + parseInt(window.getComputedStyle($('.slider')[0],':before').getPropertyValue('border-width').substr(0, window.getComputedStyle($('.slider')[0],':before').getPropertyValue('border-width').length - 2))/2 ;
 		var switchWidth = $('label').width() - totalCurrWidth;			
-		$('head').append('<style>input:checked + .slider:before{transform: translateX('+switchWidth +'px);}</style>');		
+		$('head').append('<style>input:checked + .slider:before{transform: translateX('+switchWidth +'px);-webkit-transform: translateX('+switchWidth +'px);-moz-transform: translateX('+switchWidth +'px);-o-transform: translateX('+switchWidth +'px);}</style>');		
 	});
 	
 	$('#start button').click(function(){//Start button, it will start over every time is pressed
