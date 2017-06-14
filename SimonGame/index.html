@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simon Game</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Oswald|VT323" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10 col-sm-offset-1">                
+                <div id="green" class="btns unclickable"><button></button></div>
+                <div id="red" class="btns unclickable"><button></button></div>                               
+                <div id="yellow" class="btns unclickable"><button></button></div>
+                <div id="blue" class="btns unclickable"><button></button></div> 
+                <div id="middle"><h1>Simon</h1><div id="mid-row"><div id="count" class="text-center"><section>--</section><span>COUNT</span></div>
+                    <div id="start" class="text-center"><button class="unclickable"></button><span>START</span></div>
+                    <div id="strict" class="text-center"><div id="light" class="text-center"></div><button class="unclickable"></button><span>STRICT</span></div>
+                    </div><div id="on-off"><span>OFF</span><label><input type="checkbox"><div class="slider"></div></label><span>ON</span></div>
+                </div>                  
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

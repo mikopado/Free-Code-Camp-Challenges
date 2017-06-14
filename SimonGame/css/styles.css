@@ -1,0 +1,284 @@
+body{
+    font-family: 'Oswald', sans-serif;
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(left, #CFDEF3, #E0EAFC);
+    background: -moz-linear-gradient(left, #CFDEF3, #E0EAFC);
+    background: -o-linear-gradient(left, #CFDEF3, #E0EAFC);
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+div.container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;   
+}
+div.container > div.row{
+    width: 100%;    
+}
+/*The circle that contains all items to play*/
+div.col-md-offset-3{
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 78vh; 
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;  
+    position: relative;  
+}
+/*Main 4 colourful buttons to play*/
+.btns{
+    display: inline-block;      
+    width: 47%;
+    height: 230px;
+    overflow: hidden;    
+}
+.btns button{
+    padding: 0px;     
+    width: 100%;
+    height: 100%;
+    outline: none!important;  
+    border: 0px;     
+}
+#blue button.clicked{    
+    background-color:#b3b3ff;  
+}
+#yellow button.clicked{
+    background-color: #ffffb3;
+}
+#red button.clicked{
+    background-color: #ffb3b3;
+}
+#green button.clicked{
+    background-color: #80ff80;
+}
+#green{
+    align-self: flex-start;    
+    border-top-left-radius: 100%;              
+}
+#yellow{    
+    border-bottom-left-radius: 100%;    
+}
+#blue{
+    border-bottom-right-radius: 100%;   
+}
+#red{    
+    border-top-right-radius: 100%;       
+}
+#green button{
+    background-color: green;       
+}
+#yellow button{
+     background-color: #cccc00;       
+}
+#blue button{
+     background-color:  blue;
+}
+#red button, #start button{
+    background-color: red; 
+}
+#yellow, #blue{
+    align-self: flex-end;
+    margin-top: 20px;
+}
+#green, #yellow{
+    margin-right: 20px;
+}
+/*Circle in the middle with start, on-off buttons and so on*/
+#middle{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    border: 20px solid black;
+    position: absolute;
+    top: 20%;
+    background-color: #FFFFF0;
+    display: flex; 
+    align-items: flex-start;    
+    flex-wrap: wrap;    
+}
+#middle h1, #on-off{    
+    width: 100%;
+    text-align: center;
+}
+#start button, #strict button{    
+    height: 4vh;
+    width: 70%;     
+    border-radius: 50%; 
+    box-shadow: 1px 1px 2px;
+    margin-bottom: 8px;
+    border: 4px outset #262626;   
+    outline: none!important;   
+}
+#start button:active, #strict button:active{
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+    box-shadow: 0px 0px 0px;
+}
+#strict, #start{
+    width: 25%;
+}
+#start{
+    margin-right: 4vw;
+    margin-left: 4vw; 
+}
+ #strict button{
+     background-color: yellow;
+ }
+/*Simon text*/
+h1{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 5em;
+    margin-top: 40px;
+    color: black;
+    margin-bottom: 0px;
+}
+/*Items between simon text and on-off switch*/
+#mid-row{
+    display: flex;
+    align-items: flex-end;   
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: -10px;
+}
+/*On off switch*/
+#middle div#on-off label{
+    display: inline-block;
+    width: 20%;
+    height: 19px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    margin-bottom: -4px;
+}
+input{
+    display: none;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00BFFF;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 2px inset #66d9ff;  
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 25px;
+  left: 0px;   
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 8px outset #0086b3;  
+  background-color: #0086b3;
+}
+
+/*Small light above Strict button*/
+#light{
+    border: 2px outset #262626;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    height: 10px;
+    margin-bottom: 10px;    
+    background-color: #660000;
+    box-shadow: 1px 1px 2px;
+}
+#light.light-on{
+    background-color: #ff1a1a;
+}
+/*Display that count repetitions*/
+#count section{
+    height: 6vh;
+    font-family: 'VT323', monospace;
+    border-radius: 20%;
+    border: 5px inset #262626;    
+    margin-bottom: 4px;     
+    background-color: #660000;
+    box-shadow: 1px 1px 2px grey;
+    font-size: 22px;
+    /*color: #660000;*/
+    letter-spacing: 2px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+#count{
+    width: 40%; 
+}
+/*Any text around buttons*/
+span{
+    font-size: .8em;  
+    font-weight: 600;  
+}
+.unclickable{
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 768px){    
+    h1{
+        font-size: 2em;
+        margin-top: 30px;
+    }
+    div.col-md-6{ 
+        margin-left: auto;
+        margin-right: auto;   
+        width: 90%;
+        height: 80vh;    
+    }
+       
+    span{
+        font-size: .7em;
+    }
+    #middle div#on-off label{        
+        width: 30%;
+    }
+    .slider:before{
+        width: 15%;
+    }
+    .btns{
+        width: 45%;
+        height: 35vh;
+    }
+    #mid-row{        
+        width: 100%;
+        margin-right: 5px;
+        margin-left: 5px;
+        text-align: center;
+    }
+    #count{
+        width: 40%;
+    }
+    #count section{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        letter-spacing: 0px;
+    }
+    #start button, #strict button{
+        width: 40%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    #start{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #light{
+        width: 25%;
+    }
+   
+   
+    
+    
+    
+}
+
