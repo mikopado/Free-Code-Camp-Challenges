@@ -1,2 +1,2 @@
 # Free-Code-Camp-Challenges
-Projects built in Free Code Camp
+Front-End applications built in Free Code Camp
