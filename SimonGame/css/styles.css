@@ -9,30 +9,31 @@ body{
 }
 div.container{
    display: flex;
-   align-items: center;
-   justify-content: center;
+   align-items: center;     
    height: 100vh;   
 }
-div.container > div.row{
-    width: 100%;    
+div.row{
+    width: 100%;        
 }
 /*The circle that contains all items to play*/
-div.col-md-offset-3{
-    border-radius: 50%;
-    border: 1px solid black;   
-    height: 78vh; 
+#board{
+    border-radius: 50%;   
+    width: 500px;   
+    height: 500px; 
     display: flex;
     align-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: black;  
     position: relative;  
+    margin-left: auto;
+    margin-right: auto;
 }
 /*Main 4 colourful buttons to play*/
 .btns{
     display: inline-block;      
-    width: 47%;
-    height: 35vh;
+    width: 218px;
+    height: 220px;
     overflow: hidden;    
 }
 .btns button{
@@ -81,11 +82,11 @@ div.col-md-offset-3{
 }
 #yellow, #blue{
     align-self: flex-end;
-    margin-top: 20px;
+    margin-top: 25px;
 }
-#green, #yellow{
-    margin-right: 20px;
-}
+/*#green, #yellow{
+    margin-right: -10px;
+}*/
 /*Circle in the middle with start, on-off buttons and so on*/
 #middle{
     width: 60%;
@@ -104,8 +105,8 @@ div.col-md-offset-3{
     text-align: center;
 }
 #start button, #strict button{    
-    height: 4vh;
-    width: 70%;     
+    height: 26px;
+    width: 26px;     
     border-radius: 50%; 
     box-shadow: 1px 1px 2px;
     margin-bottom: 8px;
@@ -122,8 +123,8 @@ div.col-md-offset-3{
     width: 25%;
 }
 #start{
-    margin-right: 4vw;
-    margin-left: 4vw; 
+    margin-right: 40px;
+    margin-left: 40px; 
 }
  #strict button{
      background-color: yellow;
@@ -131,7 +132,7 @@ div.col-md-offset-3{
 /*Simon text*/
 h1{
     font-family: 'Alfa Slab One', cursive;
-    font-size: 4em;
+    font-size: 50px;
     margin-top: 40px;
     color: black;
     margin-bottom: 0px;
@@ -147,7 +148,7 @@ h1{
 /*On off switch*/
 #middle div#on-off label{
     display: inline-block;
-    width: 20%;
+    width: 60px;
     height: 19px;
     margin-left: 5px;
     margin-right: 5px;
@@ -183,11 +184,17 @@ input{
   border-left: 8px solid #0086b3; 
   background-color: #0086b3;
 }
+input:checked + .slider:before{
+    transform: translateX(32px);
+    -webkit-transform: translateX(32px);
+    -moz-transform: translateX(32px);
+    -o-transform: translateX(32px);
+}
 
 /*Small light above Strict button*/
 #light{
     border: 2px solid black;
-    width: 30%;
+    width: 10px;
     margin-right: auto;
     margin-left: auto;
     border-radius: 50%;
@@ -201,7 +208,7 @@ input{
 }
 /*Display that count repetitions*/
 #count section{
-    height: 6vh;
+    height: 40px;
     font-family: 'VT323', monospace;
     border-radius: 20%;
     border: 5px inset #262626; 
@@ -228,59 +235,12 @@ span{
 }
 
 @media only screen and (max-width: 768px){    
-    h1{
-        font-size: 2em;
-        margin-top: 30px;
-    }
-    div.col-md-6{ 
-        margin-left: auto;
-        margin-right: auto;       
-        height: 80vh;    
-    }       
-    span{
-        font-size: .7em;
-    }
-    #middle div#on-off label{        
-        width: 30%;
-    }
-    .slider:before{
-        width: 15%;
-    }
-    .btns{
-        width: 45%;
-        height: 35vh;
-    }
-    #mid-row{        
-        width: 100%;
-        margin-right: 5px;
-        margin-left: 5px;
-        text-align: center;
-    }
-    #count{
-        width: 40%;
-    }
-    #count section{
-        width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
-        letter-spacing: 0px;
-    }
-    #start button, #strict button{
-        width: 40%;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    #start{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    #light{
-        width: 25%;
-    }
-   
-   
     
-    
+   .row{
+       transform: scale(0.6);      
+   }
+ 
+   
     
 }
 
