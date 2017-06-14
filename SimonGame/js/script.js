@@ -27,7 +27,7 @@ $(function(){
 		return series;
 	}
 
-	$('input').change(function(){//Based on the switch is on or off allow button to be clickable or not clickable
+	$('input').change(function(){//Based on the switch is on or off allow button to be clickable or not clickable				
 		if($(this).prop('checked')){			
 			$('#start button').removeClass('unclickable');
 			$('#strict button').removeClass('unclickable');
@@ -48,15 +48,15 @@ $(function(){
 	$(document).ready(function(){//Translate the switch on-off based on the actual lenght of the on-off slider. Necessary for responsive design
 		//As it's impossible modify css of pseudo selector from Jquery, it's necessary append to head the style with new elements. 
 		var currentSwitchWidth = parseInt(window.getComputedStyle($('.slider')[0],':before').getPropertyValue('width').substr(0, window.getComputedStyle($('.slider')[0],':before').getPropertyValue('width').length - 2));
-		var totalCurrWidth = currentSwitchWidth + parseInt(window.getComputedStyle($('.slider')[0],':before').getPropertyValue('border-width').substr(0, window.getComputedStyle($('.slider')[0],':before').getPropertyValue('border-width').length - 2))/2 ;
-		var switchWidth = $('label').width() - totalCurrWidth;			
-		$('head').append('<style>input:checked + .slider:before{transform: translateX('+switchWidth +'px);-webkit-transform: translateX('+switchWidth +'px);-moz-transform: translateX('+switchWidth +'px);-o-transform: translateX('+switchWidth +'px);}</style>');		
+		var totalCurrWidth = currentSwitchWidth + parseInt(window.getComputedStyle($('.slider')[0],':before').getPropertyValue('border-top-width').substr(0, window.getComputedStyle($('.slider')[0],':before').getPropertyValue('border-top-width').length - 2))/2 ;
+		var switchWidth = $('label').width() - totalCurrWidth;					
+		$('head').append('<style>input:checked + .slider:before{transform: translateX('+switchWidth +'px);-webkit-transform: translateX('+switchWidth +'px);-moz-transform: translateX('+switchWidth +'px);-o-transform: translateX('+switchWidth +'px);}</style>');
+		$('input').prop('checked',false);		
 	});
 	
 	$('#start button').click(function(){//Start button, it will start over every time is pressed
 		clearData();		
-		startOver(500);		
-		var start = new Audio('audio/clickStart.wav');
+		startOver(500);			
 		clickSound.play();				
 	});
 
@@ -192,5 +192,7 @@ $(function(){
 		storedSeries = createSeries();
 		setTimeout(function(){showComputerSeries(storedSeries, count);},interval);
 	}	
+
+	
 	
 })
