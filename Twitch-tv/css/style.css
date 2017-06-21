@@ -1,0 +1,128 @@
+body{
+    background: #834d9b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d04ed6, #834d9b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d04ed6, #834d9b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Fredoka One', cursive;
+}
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px 7px black;
+    font-size: 3em;
+    font-family: 'Freckle Face', cursive;
+}
+/*All users together, column */
+#users-panel{/*Set display of all users*/
+    height: 80vh;
+    border: .5px solid #6b2390;
+    overflow-y: scroll;
+    padding: 0;
+    background-color: white;
+}
+/*Set Each user box*/
+a, a:hover, a:focus{/*Prevent normal behaviour of anchor link*/
+    outline: none!important;
+    text-decoration: none!important; 
+    color: black;
+}
+section{
+    width: 100%;
+    height: 20%;
+    display: flex;     
+    justify-content: flex-start;
+    position: relative;
+}
+.users{
+    width: 100%; 
+    height: 50%;    
+    display: flex;    
+    align-items: center;    
+    margin-left: 8px;
+}
+.users span{
+    margin-left: 20px;
+}
+img{
+    width: 30px;
+    border-radius: 100%;
+}
+#users-panel .offline, #users-panel .online, #users-panel .no-account{/*led that show user status*/
+    border: 1px solid grey;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;    
+}
+#users-panel .no-account{ /*Set user status when user doesn't exist*/    
+    width: 5em;
+    height: 3em;   
+    font-size: 9px;
+    text-align: center;     
+}
+p{/*Description of the streaming when this is online*/     
+    font-size: .75em;
+    position: absolute;    
+    left: 21%; 
+    top: 50%;         
+    height: 50%;
+    width: 79%;     
+}
+iframe{/*Screen to show streaming, not visible on mobile*/
+    width: 100%;
+    height: 80vh;
+    border: 1px solid;
+    background: url('../images/twitch-tv.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+/*Buttons all, offline, online*/
+button div{ 
+    width: 6px;   
+    height: 6px;    
+    border-radius: 50%;
+    border: 1px solid black;
+    display: inline-block;    
+}
+button{
+    width: 70px;
+    text-align: left;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px;
+    color: white;   
+    border: 0.5px solid grey;
+    background-color: #b3b3ff;
+}
+#all div{
+    background-color: grey;
+}
+/*Supporting classes for focus in and out, to not display item and so on. Useful for Javascript*/
+.offline{
+    background-color: red;
+}
+.online{
+    background-color: green;
+}
+
+.no-display{
+    display: none;
+}
+.highlight{
+    border: 2px outset #3333ff;
+    background-color: #1a1aff;
+    outline: none!important; 
+}
+.active{
+    background-color:#3333ff;
+}
+
+@media only screen and (max-width:768px){
+    h1{
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+}
+
