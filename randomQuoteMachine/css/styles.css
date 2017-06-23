@@ -1,7 +1,8 @@
 
 body  {
 	background: url('../images/back2.jpg') no-repeat;
-  background-size: 100% 100%;  	
+  background-size: 100% 100%;  
+	background-attachment: fixed;	
   height: 100vh;
 	font-family: 'Tangerine', cursive;
 }
@@ -15,7 +16,7 @@ div#tile {
 }
 div#random-quote {
   animation-duration: 2s;
- }
+}
 /*Quote text*/
 p {
 	font-family: 'Satisfy', cursive;
@@ -28,13 +29,11 @@ p {
 footer.pull-right {	
 	font-size: 3em;
 }
-
 /*Div that contains both of buttons*/
 div#button-icon {	
 	position: absolute;
-	top: 550px;
+	top: 80%;
 }
-
 /*Quote button*/
 div#btn-quote {	
 	width: 100px;
@@ -55,7 +54,6 @@ div#btn-quote button {
 div#btn-quote button:focus {
 	outline: none!important;
 }
-
 /*Twitter button*/
 a.btn-twitter {
 	background: url(../images/btn-pic.jpg) no-repeat;
@@ -71,44 +69,40 @@ a.btn-twitter span.fa-twitter {
 	color: #8B4513;
 	font-size: 2.5em;
 }
-
-
-@media(max-width: 991px) {
-  p {
+@media(max-width: 991px) {  
+  p, div#random-quote footer.pull-right {
     font-size: 2em;
-  }
-  div#random-quote footer.pull-right {
-    font-size: 2em;
-  }
-  
+  }  
   div#tile {	
-	margin-top: 60px;	
-  }
- 
+		margin-top: 20px;	
+  } 
 }
 @media(max-width: 545px) {
-  h1 {	
-    font-size: 3em;
-  }
-  p {
-    font-size: 1.2em;
-  }
-   div#random-quote footer.pull-right {
-    font-size: 1.5em;
-  }
-  div#button-icon {	
-	top: 350px;
-}
-  div#btn-quote button {
-  	font-size: 1.5em;
-  	
-  }
-  a.btn-twitter span.fa-twitter {
-  	font-size: 1.5em;
-  }
-  div#btn-quote {
-  	width: 80px;
-  	height: 30px;
-  }
+		body{
+			height: 180vh;
+		}
+		h1 {	
+			font-size: 3em;
+		}
+		p {
+			font-size: 1.2em;
+		}
+		div#random-quote footer.pull-right {
+			font-size: 1.5em;
+		}
+		div#button-icon {	
+			top: 130vh;
+		}
+		div#btn-quote button {
+			font-size: 1.5em;
+			
+		}
+		a.btn-twitter span.fa-twitter {
+			font-size: 1.5em;
+		}
+		div#btn-quote {
+			width: 80px;
+			height: 30px;
+		}
  }
 

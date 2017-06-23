@@ -89,3 +89,12 @@ div#break span, div#work-session span{
 	 	margin-bottom: 20px;
 	 }
 }
+@media only screen and (max-width: 500px) and (orientation: landscape){
+	#tomato{
+		width: 100%;
+	}
+	div#break span, div#work-session span{
+		margin-right: 5px;
+		margin-left: 5px;		
+	}
+}
