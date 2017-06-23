@@ -125,7 +125,7 @@ button{
         margin-bottom: 20px;
     }
 }
-@media only screen and (max-width:300px){/*For iframe in portfolio*/
+@media only screen and (max-width:300px) and (orientation: landscape){/*For iframe in portfolio*/
     section{
         overflow: hidden;
     }
