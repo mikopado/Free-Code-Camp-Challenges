@@ -99,7 +99,7 @@ div#break span, div#work-session span{
 	div#break .minus{
 		margin-top: 30px;
 	}
-	#display-session{
+	div#display-session{
 		font-size: 1.5em;
 	}
 }
