@@ -70,3 +70,20 @@ button#AC.btn.btn-default:focus, button#CE.btn.btn-default:focus {
 		padding: 0px;
 	}
 }
+@media only screen and (max-width: 500px) and (orientation: landscape){
+	h1{
+		font-size: 2em;
+	}
+	h3{
+		font-size: 1em;
+	}
+	button.btn.btn-default{				
+		font-size: .7em;		
+	}
+	div.col-xs-3{
+		padding: 4px;
+	}
+	.row .row{
+		margin: 0;
+	}
+}
