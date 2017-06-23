@@ -93,8 +93,8 @@ div#break span, div#work-session span{
 		width: 100%;
 	}
 	div#break span, div#work-session span{
-		margin-right: 3px;
-		margin-left: 3px;		
+		margin-right: 0px;
+		margin-left: 0px;		
 	}	
 	div#break .minus{
 		margin-top: 30px;
