@@ -103,4 +103,12 @@ button.choice{
 	button.col-xs-4{
 		height: 100px;
 	}
+	@media only screen and (max-width: 500px) and (orientation: landscape){/*For iframe in portfolio*/
+		button.choice{
+			margin: 0;			
+		}
+		h1, button.choice{
+			font-size: 2em;
+		}
+	}
 }
