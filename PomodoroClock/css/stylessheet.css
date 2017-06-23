@@ -64,9 +64,15 @@ div#break span, div#work-session span{
 	margin-left: 10px;
 	font-size: 25px;
 }
-
-
-@media(max-width: 480px){
+#tomato{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media only screen and (max-width: 768px){
+	#tomato{
+		width: 80%;
+	}
 	h1.text-center, div#display-session, div#display-timer {
 		font-size: 1.8em;
 	}
@@ -81,10 +87,5 @@ div#break span, div#work-session span{
 	 }
 	 div#break button {
 	 	margin-bottom: 20px;
-	 }
-}
-@media(min-width: 424px) and (max-width: 480px){
-	 div#break button {
-	 	margin-bottom: 0px;
 	 }
 }
