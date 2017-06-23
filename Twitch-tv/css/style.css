@@ -125,4 +125,15 @@ button{
         margin-bottom: 20px;
     }
 }
+@media only screen and (max-width:300px){/*For iframe in portfolio*/
+    section{
+        overflow: hidden;
+    }
+    p, .no-account{
+        visibility: hidden;
+    }
+    button{
+        width: 50px;
+    }
+}
 
