@@ -12,7 +12,7 @@ h1 {
 }
 /*Random quote div*/
 div#tile {	
-	margin-top: 100px;	
+	margin-top: 60px;	
 }
 div#random-quote {
   animation-duration: 2s;
@@ -77,10 +77,7 @@ a.btn-twitter span.fa-twitter {
 		margin-top: 20px;	
   } 
 }
-@media(max-width: 545px) {
-		body{
-			height: 180vh;
-		}
+@media(max-width: 545px) {	
 		h1 {	
 			font-size: 3em;
 		}
@@ -89,10 +86,7 @@ a.btn-twitter span.fa-twitter {
 		}
 		div#random-quote footer.pull-right {
 			font-size: 1.5em;
-		}
-		div#button-icon {	
-			top: 130vh;
-		}
+		}		
 		div#btn-quote button {
 			font-size: 1.5em;			
 		}
