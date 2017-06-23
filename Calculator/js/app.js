@@ -9,7 +9,7 @@ $(function(){
 		while(n < 4){
 			n++;
 			var val = symbols[sign++];
-			$(this).append('<div class="col-xs-3"><button id="' + val + '"class="btn btn-default">' + val +'</button></div>');
+			$(this).append('<div class="col-xs-3"><button id="' + val + '"class="btn btn-default text-center">' + val +'</button></div>');
 			
 		}
 	});
@@ -55,9 +55,7 @@ $(function(){
 					tempResult = '';
 					operatorIndex = 0;
 					tempExpression = "";
-				}else if(trackResult.length !== 0){	
-				console.log($('div#input p#tracking').text().length - 1);
-				console.log(trackResult[trackResult.length - 1].operatorIndex);				
+				}else if(trackResult.length !== 0){								
 					if($('div#input p#tracking').text().length - 1 === trackResult[trackResult.length - 1].operatorIndex){// If the math expression length -1 is equal to the index associated to the last opeartor sign where it has been claculated the temporary result
 						tempResult = trackResult[trackResult.length - 1].tempResult; //tempresult will be equal to tempresult linked to the last index 
 						trackResult.pop();							//then we delete the last element in the array
@@ -77,7 +75,6 @@ $(function(){
 		} else if(/[^A-Za-z0-9_=().]/.test($(this).attr('id'))){ //If button is any operator sign
 			if(/[0-9)]/.test($('div#input p#tracking').text()[$('div#input p#tracking').text().length - 1])){//The operator will be displayed only if the last element displayed is a number or bracket.
 				$('div#input p#tracking').append(elem);
-
 				lastIndex = $('div#input p#tracking').text().length - 1;
 				tempExpression = tempResult + $('div#input p#tracking').text().slice(operatorIndex,lastIndex);//math expression of the last result plus the expression from last operator(Necessary to calculate expression element by element and overcome the operation precedence)
 				tempResult = getTotal(tempExpression);   //Calculate new result with new elements added
