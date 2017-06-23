@@ -111,5 +111,8 @@ a.btn-twitter span.fa-twitter {
 		div#button-icon {	
 			top: 130vh;
 		}
+		h1 {	
+			font-size: 2em;
+		}
  }
 

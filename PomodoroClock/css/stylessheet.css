@@ -99,6 +99,9 @@ div#break span, div#work-session span{
 	div#break .minus{
 		margin-top: 30px;
 	}
+	#display-session{
+		font-size: 1.5em;
+	}
 }
 @media only screen and (min-width: 368px) and (max-width: 767px) and (orientation: landscape){
 	div#break .minus{
