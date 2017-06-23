@@ -1,15 +1,14 @@
 
 body  {
-	background: url(../images/back2.jpg) no-repeat;
-  	background-size: cover;  	
-  	background-attachment: fixed;
+	background: url('../images/back2.jpg') no-repeat;
+  background-size: 100% 100%;  	
+  height: 100vh;
 	font-family: 'Tangerine', cursive;
 }
 /*Random Quote Machine Text Header*/
 h1 {	
 	font-size: 6em;
 }
-
 /*Random quote div*/
 div#tile {	
 	margin-top: 100px;	
@@ -17,7 +16,6 @@ div#tile {
 div#random-quote {
   animation-duration: 2s;
  }
-
 /*Quote text*/
 p {
 	font-family: 'Satisfy', cursive;
@@ -26,7 +24,6 @@ p {
 	font-style: italic;
 
 }
-
 /*Quote Author text*/
 footer.pull-right {	
 	font-size: 3em;
