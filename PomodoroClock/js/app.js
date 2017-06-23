@@ -60,14 +60,14 @@ $(function(){
 
 	
 
-	$('button#plus').click(function(){ //Increment by 1 the work session or break length
+	$('button.plus').click(function(){ //Increment by 1 the work session or break length
 		var par = ($(this).parent());		
 		changeTimerLength((par.get(0).localName + '#' + par.get(0).id + ' span'), '+');
 		checkTimerWhenInPause(par.get(0).id);
 		
 		
 	});
-	$('button#minus').click(function(){// Decrement by 1 the work session or break length
+	$('button.minus').click(function(){// Decrement by 1 the work session or break length
 		var par = ($(this).parent());		
 		changeTimerLength((par.get(0).localName + '#' + par.get(0).id + ' span'), '-');
 		checkTimerWhenInPause(par.get(0).id);

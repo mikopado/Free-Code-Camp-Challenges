@@ -41,9 +41,8 @@ div#display-timer{
 	margin-top: 30px;
 }
 /*Work session lenght and break lenght buttons*/
-div.start {
-	margin-bottom: 10px;
-
+.minus {
+	margin-top: 10px;
 }
 div.start button{
 	font-size: 25px;
@@ -54,7 +53,7 @@ div#break button, div#work-session button{
 	background-color: transparent;
 }
 /*Minus and plus buttons*/
-button#minus, button#plus{
+button.minus, button.plus{
 	font-size: 30px;
 	margin-bottom: 10px;
 }
@@ -76,7 +75,7 @@ div#break span, div#work-session span{
 	h1.text-center, div#display-session, div#display-timer {
 		font-size: 1.8em;
 	}
-	div#break span, div#work-session span, button#minus, button#plus, div.start button{
+	div#break span, div#work-session span, button.minus, button.plus, div.start button{
 		font-size: 1.1em;
 	}
 	 div#display-session{
@@ -85,8 +84,8 @@ div#break span, div#work-session span{
 	 div#display-timer {
 	 	margin-bottom: 50px;
 	 }
-	 div#break button {
-	 	margin-bottom: 20px;
+	 div#break .minus {
+	 	margin-top: 30px;
 	 }
 }
 @media only screen and (max-width: 500px) and (orientation: landscape){
@@ -96,5 +95,13 @@ div#break span, div#work-session span{
 	div#break span, div#work-session span{
 		margin-right: 5px;
 		margin-left: 5px;		
+	}	
+	div#break .minus{
+		margin-top: 30px;
+	}
+}
+@media only screen and (min-width: 368px) and (max-width: 767px) and (orientation: landscape){
+	div#break .minus{
+		margin-top: 10px;
 	}
 }
