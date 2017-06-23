@@ -94,8 +94,7 @@ a.btn-twitter span.fa-twitter {
 			top: 130vh;
 		}
 		div#btn-quote button {
-			font-size: 1.5em;
-			
+			font-size: 1.5em;			
 		}
 		a.btn-twitter span.fa-twitter {
 			font-size: 1.5em;
@@ -103,6 +102,14 @@ a.btn-twitter span.fa-twitter {
 		div#btn-quote {
 			width: 80px;
 			height: 30px;
+		}
+ }
+ @media only screen and (max-width: 545px) and (orientation: landscape){
+	 	body{
+			height: 180vh;
+		}
+		div#button-icon {	
+			top: 130vh;
 		}
  }
 
